@@ -26,6 +26,10 @@ RUN python -c "import whisperx; from whisperx.vad import load_vad_model; load_va
 # Copy the rest of the builder files
 COPY builder /builder
 
+ENV HF_HUB_ENABLE_HF_TRANSFER=1
+ENV HF_HUB_DISABLE_EXPERIMENTAL_WARNING=1
+ENV HF_HUB_DISABLE_PROGRESS_BARS=1
+
 # Download Faster Whisper Models
 RUN chmod +x /builder/download_models.sh
 RUN --mount=type=cache,target=/cache/models \
