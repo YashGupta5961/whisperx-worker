@@ -1,10 +1,14 @@
 --extra-index-url https://download.pytorch.org/whl/cu121
-torch==2.1.0+cu121
-torchvision==0.16.0+cu121
-torchaudio==2.1.0+cu121
+torch==2.2.0+cu121
+#torchvision==0.16.0+cu121
+torchvision
+#torchaudio==2.1.0+cu121
+torchaudio==2.2.0+cu121
 pydub
-git+https://github.com/m-bain/whisperx.git
+# git+https://github.com/m-bain/whisperx.git
+git+https://github.com/m-bain/whisperx.git@v3.3.1
 runpod
 cog
-speechbrain==0.5.16
+# speechbrain==0.5.16
+speechbrain
 cryptography<43.0.0
